@@ -1,11 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 
 
 export default function Dictionary(){
-    function search(){
-        alert("searching");
+    let [keyword,setKeyword]=useState("");
+    function search(event){
+        event.preventDefault();
+        alert(`searching for ${keyword}`);
 
+    }
+    function handleKeywordChange(event){
+        console.log(event.target.value);
+        setKeyword(event.target.value);
     }
     return (
         <div>
@@ -13,7 +19,7 @@ export default function Dictionary(){
             <h2>What word you want to look up?
             </h2>
             <div className="dictionary">
-                <form onSubmit={search}><input type="search" auto-focus="true" className="mysearch" placeholder="search"></input>
+                <form onSubmit={search} onChange={handleKeywordChange}><input type="search" auto-focus="true" className="mysearch" placeholder="search"></input>
                 </form>
                 </div>
          </div>
