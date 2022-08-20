@@ -5,7 +5,7 @@ import axios from "axios";
 
 export default function Dictionary() {
   let [keyword, setKeyword] = useState("");
-  let [results, setResults] = useState({});
+  let [results, setResults] = useState(null);
   function search(event) {
     event.preventDefault();
     // alert(`searching for ${keyword}`);
