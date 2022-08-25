@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <div className="wrapper">
         <header className="App-header">
-          <img src={require(".//logo1.png")} className="App-logo" alt="logo" />
+          <img src={require(".//logo2.png")} className="App-logo" alt="logo" />
         </header>
         <Dictionary defaultKeyword="cat" />
         <footer>
